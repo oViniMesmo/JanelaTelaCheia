@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Janela em Tela Cheia",
+  "version": "1.3.0",
+  "description": "Expande o vídeo para ocupar toda a janela dividida (1/2, 1/4) sem abas e sem elementos do site.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Alternar Tela Cheia na Janela (Alt+W)",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "toggle-windowed-fullscreen": {
+      "suggested_key": {
+        "default": "Alt+W"
+      },
+      "description": "Alternar Tela Cheia na Janela"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "windowed-fullscreen@exemplo.com",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

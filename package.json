@@ -1,0 +1,21 @@
+{
+  "name": "janela-em-tela-cheia",
+  "version": "1.3.0",
+  "description": "Expande o vídeo para ocupar toda a janela dividida (1/2, 1/4) sem abas e sem elementos do site.",
+  "type": "module",
+  "main": "background.js",
+  "scripts": {
+    "test": "node --test",
+    "build": "node build.mjs"
+  },
+  "keywords": [
+    "browser-extension",
+    "firefox",
+    "chrome",
+    "fullscreen",
+    "streaming",
+    "video"
+  ],
+  "author": "JanelaTelaCheia",
+  "license": "MIT"
+}
