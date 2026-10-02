@@ -1,10 +1,10 @@
-# 🪟 Janela em Tela Cheia (Windowed Fullscreen) v1.3.0
+# Janela em Tela Cheia (Windowed Fullscreen) v1.3.0
 
 Extensão de navegador universal (**Manifest V3**) para **Firefox**, **Google Chrome**, **Brave** e **Microsoft Edge**, desenvolvida para transformar reprodutores de vídeo da web em **tela cheia restrita à janela atual**, ideal para telas divididas (*split screen* 1/2, 1/3, 1/4) e multitarefa em alta produtividade.
 
 ---
 
-## 🎯 Objetivo e Motivação
+## Objetivo e Motivação
 
 Quando usamos o modo tela cheia padrão dos navegadores (F11 ou o botão nativo do YouTube/Netflix), o vídeo consome **100% da tela física do monitor**, quebrando layouts multitarefa (como Windows Snap, FancyZones ou tiling window managers).
 
@@ -17,10 +17,10 @@ A extensão **Janela em Tela Cheia** resolve isso ao:
 
 ---
 
-## ✨ Recursos Implementados (v1.3.0)
+## Recursos Implementados (v1.3.0)
 
-* 🌐 **Compatibilidade Multi-Navegador Nativa**: Suporte total a **Firefox** (AMO) e **Chromium** (Chrome, Edge, Brave, Opera) através do shim universal `browserAPI = globalThis.browser || globalThis.chrome`.
-* 🎬 **Suporte Amplo a Streamings**:
+*  **Compatibilidade Multi-Navegador Nativa**: Suporte total a **Firefox** (AMO) e **Chromium** (Chrome, Edge, Brave, Opera) através do shim universal `browserAPI = globalThis.browser || globalThis.chrome`.
+*  **Suporte Amplo a Streamings**:
   * **YouTube**: Acionamento nativo da classe `.ytp-fullscreen` e ocultação de header, sugestões, chat e comentários.
   * **Netflix**: Detecção dos contêineres `.watch-video` e preservação dos controles.
   * **Twitch**: Suporte ao `.video-player__container` e `.persistent-player` com ocultação automática do painel lateral de chat (`.channel-root__right-column`).
@@ -29,19 +29,19 @@ A extensão **Janela em Tela Cheia** resolve isso ao:
   * **Max / HBO**: Suporte a `[data-testid="player-video-container"]` e `.default-player-container`.
   * **Crunchyroll**: Suporte ao `#player0` e `.vilos-player`.
   * **HTML5 Genérico**: Algoritmo heurístico que sobe a árvore DOM do `<video>` ativo para encontrar o container dimensional correspondente.
-* 🔄 **Re-acoplamento Inteligente de Abas**:
+*  **Re-acoplamento Inteligente de Abas**:
   * Ao desativar, a extensão verifica se a janela original da qual a aba se desprendeu ainda existe.
   * Se existir, move a aba de volta para a janela original e foca a aba.
   * Se a janela original tiver sido fechada, cria uma nova janela normal restaurando as coordenadas anteriores.
-* 🔔 **HUD Toast Notification (Glassmorphism)**:
+*  **HUD Toast Notification (Glassmorphism)**:
   * Aviso visual suave e moderno na tela ao ativar (*"Janela em Tela Cheia ativada - Alt+W ou Esc para sair"*) e ao desativar (*"Janela normal restaurada"*).
   * Construído com `backdrop-filter: blur`, fundo translúcido, transições fade fluidas e `pointer-events: none` (não intercepta nenhum clique do usuário).
-* 🎨 **Identidade Visual & Ícones Nativos**:
+*  **Identidade Visual & Ícones Nativos**:
   * Ícone master vetorial SVG (`icons/icon.svg`) com estética de janela em expansão e gradiente ciano/índigo.
   * Gerador autônomo em Node.js puro (`scripts/generate_icons.mjs`) que desenha ícones PNG com *Signed Distance Fields* (SDF) e *Supersampling* (SSAA 4x4) nos tamanhos 16x16 (pixel-perfect), 32x32, 48x48 e 128x128.
-* 📦 **Build & Empacotamento Automatizado**:
+*  **Build & Empacotamento Automatizado**:
   * Script `build.mjs` com gerador nativo de arquivos ZIP via `node:zlib` (sem dependências externas) que produz pacotes prontos para Firefox (`dist/JanelaTelaCheia-firefox.zip`) e Chromium (`dist/JanelaTelaCheia-chrome.zip`).
-* 🧪 **Suíte de Testes 100% Nativa**:
+*  **Suíte de Testes 100% Nativa**:
   * 11 testes unitários e de integração executados com `node --test` (zero dependências npm).
 
 ---
@@ -76,7 +76,7 @@ JanelaTelaCheia/
 
 ---
 
-## ⚙️ Fluxo de Funcionamento
+##  Fluxo de Funcionamento
 
 ```mermaid
 sequenceDiagram
@@ -122,7 +122,7 @@ sequenceDiagram
 
 ---
 
-## 🧪 Testes Automatizados
+##  Testes Automatizados
 
 O projeto utiliza o test runner nativo do Node.js (`node:test` e `node:assert`).
 
@@ -145,7 +145,7 @@ npm test
 
 ---
 
-## 🚀 Como Compilar e Instalar
+##  Como Compilar e Instalar
 
 ### 1. Compilar os pacotes
 ```bash
